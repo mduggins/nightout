@@ -28,35 +28,35 @@ angular.module("NightOut")
 
     sCtrl.placeTypes = ['restaurant', 'bar', 'night_club']
 
-    NgMap.getMap().then(function(map){
-      sCtrl.request = {
-        location: sCtrl.coords,
-        radius: 8048,
-        types: [placetype]
-      }
-      console.log(sCtrl.request)
-      sCtrl.service = new google.maps.places.PlacesService(map)
-
-      sCtrl.placeTpyes.forEach(function(placetype){
+    sCtrl.placeTypes.forEach(function(placetype){
+      NgMap.getMap().then(function(map){
+        sCtrl.request = {
+          location: sCtrl.coords,
+          radius: 8048,
+          types: [placetype]
+        }
+        console.log(sCtrl.request)
+        sCtrl.service = new google.maps.places.PlacesService(map)
         sCtrl.service.nearbySearch(sCtrl.request, sCtrl.callback)
         console.log(sCtrl.service)
       })
-    })
 
-    sCtrl.callback = function(results, status){
-      console.log(results)
-      if(status == google.maps.places.PlacesServiceStatus.OK){
-          sCtrl.createmarker(results[Math.floor(Math.random() * results.length)])
+      sCtrl.callback = function(results, status){
+        console.log(results)
+        if(status == google.maps.places.PlacesServiceStatus.OK){
+            sCtrl.createmarker(results[Math.floor(Math.random() * results.length)])
         }
       }
-
-      sCtrl.createmarker = function(place){
-        console.log(place)
-        $scope.$apply(function(){
-          sCtrl.site = [place.geometry.location.lat(), place.geometry.location.lng(), place.name]
-        })
+        sCtrl.site = []
+        sCtrl.createmarker = function(place){
+          console.log(place)
+          $scope.$apply(function(){
+            sCtrl.site.push({lat:place.geometry.location.lat(), lng:place.geometry.location.lng(),name:place.name})
+          })
         console.log(sCtrl.site)
       }
+    })
+    window.sCtrl = sCtrl
   }
 
 
