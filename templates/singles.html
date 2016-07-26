@@ -1,0 +1,6 @@
+<ng-map center="current-location"zoom="13">
+  <marker position="current-location" title="You Are Here!"></marker>
+  <marker position="{{ sCtrl.site[0] }} ,{{ sCtrl.site[1] }}" title="{{sCtrl.site[2]}}"></marker>
+</ng-map>
+
+<h3>{{sCtrl.site[2]}}</h3>
