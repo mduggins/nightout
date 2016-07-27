@@ -1,0 +1,15 @@
+<ng-map center="current-location"zoom="11">
+  <marker position="current-location" title="You Are Here!"></marker>
+  <marker ng-repeat="obj in cCtrl.site" position="{{obj.lat}},{{obj.lng}}" title="{{obj.name}}"></marker>
+</ng-map>
+
+<div class="container">
+  <div class="row">
+    <div class="twelve columns" ng-repeat="obj in cCtrl.site">
+    <h4>{{obj.type}}</h4>
+      <h3>{{obj.name}}</h3>
+      <p>{{obj.vicinity}}</p>
+      <hr />
+    </div>
+  </div>
+</div>
