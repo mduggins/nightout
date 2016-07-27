@@ -13,7 +13,7 @@ angular.module('NightOut')
     })
   })
 
-  // **************************************************************************
+// ****************************************************************************
 
 angular.module("NightOut")
   .controller('singlesCtrl', singlesCtrl)
@@ -80,7 +80,7 @@ angular.module("NightOut")
 
     couplesCtrl.$inject = ['NgMap','$scope']
 
-    // ************************************************************************
+// ****************************************************************************
 
     function couplesCtrl(NgMap, $scope){
       console.log('This is from the couplesCtrl')
@@ -127,8 +127,7 @@ angular.module("NightOut")
               type: placetype
             })
           })
-        console.log(cCtrl.site)
-      }
+        }
     })
 
     cCtrl.typeFormat = function(place){
@@ -138,5 +137,4 @@ angular.module("NightOut")
       place.type = format.join('')
       return place.type
     }
-    window.cCtrl = cCtrl
   }
