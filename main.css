@@ -15,11 +15,20 @@ h3 {
 
 
 
-#headline {
+#headline-singles {
   width: 100%;
   padding: 20px 0px;
   text-align: center;
   background-color: orange;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#headline-couples {
+  width: 100%;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: blue;
   color: #fff;
   margin-bottom: 20px;
 }

@@ -3,11 +3,16 @@
   <marker ng-repeat="obj in cCtrl.site" position="{{obj.lat}},{{obj.lng}}" title="{{obj.name}}"></marker>
 </ng-map>
 
+<section id="headline-couples">
+  <h3>Want a date night, <small>see how these places work!</small></h3>
+</section>
+
 <div class="container">
-  <div class="row">
-    <div class="twelve columns" ng-repeat="obj in cCtrl.site | filter: cCtrl.typeFormat">
-    <h4>{{obj.type}}</h4>
-      <h3>{{obj.name}}</h3>
+  <div class="row"  ng-repeat="obj in cCtrl.site | filter: cCtrl.typeFormat">
+    <div class="twelve columns">
+      <img src="{{obj.icon}}" alt="Icon">
+      <h5>{{obj.type}}</h5>
+      <h4>{{obj.name}}</h4>
       <p>{{obj.vicinity}}</p>
       <hr />
     </div>

@@ -123,6 +123,7 @@ angular.module("NightOut")
               lng:place.geometry.location.lng(),
               name:place.name,
               vicinity: place.vicinity,
+              icon: place.icon,
               type: placetype
             })
           })
