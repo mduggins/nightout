@@ -13,6 +13,8 @@ angular.module('NightOut')
     })
   })
 
+  // **************************************************************************
+
 angular.module("NightOut")
   .controller('singlesCtrl', singlesCtrl)
 
@@ -56,6 +58,7 @@ angular.module("NightOut")
             lng:place.geometry.location.lng(),
             name:place.name,
             vicinity: place.vicinity,
+            icon: place.icon,
             type: placetype
           })
         })
@@ -63,11 +66,11 @@ angular.module("NightOut")
     }
   })
   sCtrl.typeFormat = function(place){
-    var format = place.type.split('').splice(0,1)
+    var format = place.type.split('')
     format[0] = format[0].toUpperCase()
-    var result = format[0]
-    console.log(place.type)
     console.log(format)
+    place.type = format.join('')
+    return place.type
   }
   window.sCtrl = sCtrl
 }
@@ -76,6 +79,8 @@ angular.module("NightOut")
     .controller('couplesCtrl', couplesCtrl)
 
     couplesCtrl.$inject = ['NgMap','$scope']
+
+    // ************************************************************************
 
     function couplesCtrl(NgMap, $scope){
       console.log('This is from the couplesCtrl')
@@ -108,7 +113,7 @@ angular.module("NightOut")
               cCtrl.createmarker(results[Math.floor(Math.random() * results.length)], placetype)
           }
         }
-        
+
         cCtrl.site = []
         cCtrl.createmarker = function(place, placetype){
           console.log(place)
@@ -124,5 +129,13 @@ angular.module("NightOut")
         console.log(cCtrl.site)
       }
     })
+
+    cCtrl.typeFormat = function(place){
+      var format = place.type.split('')
+      format[0] = format[0].toUpperCase()
+      console.log(format)
+      place.type = format.join('')
+      return place.type
+    }
     window.cCtrl = cCtrl
   }

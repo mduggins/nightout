@@ -2,6 +2,26 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #efefef;
+}
+
+img, h5 {
+  display: inline-block;
+}
+
+h3 {
+  margin: 0px;
+}
+
+
+
+#headline {
+  width: 100%;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: orange;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 #home {
@@ -21,6 +41,10 @@ html, body {
   background-color: rgba(255,255,255,.5);
 }
 
+#map {
+  height:100%;
+}
+
 .text-center {
   text-align: center;
   padding-top: 50px;
@@ -30,10 +54,6 @@ html, body {
 .padding {
   padding: 10px;
   box-sizing: border-box;
-}
-
-#map {
-  height:100%;
 }
 
 @media only screen and (max-width: 720px){
