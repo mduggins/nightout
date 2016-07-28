@@ -30,6 +30,10 @@ header {
   line-height: 60px;
 }
 
+#logo-written h3 {
+  display: inline;
+}
+
 #nav-menu {
   float: right;
   height: 60px;
@@ -49,6 +53,7 @@ header {
 #nav-menu ul li a {
   text-decoration: none;
   color: #000;
+  font-size: large;
 }
 
 #nav-menu ul li a:hover {
@@ -66,7 +71,7 @@ header {
   width: 100%;
   padding: 20px 0px;
   text-align: center;
-  background-color: orange;
+  background-color: #097054;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -75,7 +80,7 @@ header {
   width: 100%;
   padding: 20px 0px;
   text-align: center;
-  background-color: blue;
+  background-color: #6599FF;
   color: #fff;
   margin-bottom: 20px;
 }
@@ -143,4 +148,8 @@ header {
 	#nav-menu:hover ul {
 		display: block;
 	}
+
+	#innerhome {
+    width: 90%;
+    margin: 0px auto;
 }

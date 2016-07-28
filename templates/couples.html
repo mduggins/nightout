@@ -8,13 +8,12 @@
 </section>
 
 <div class="container">
-  <div class="row"  ng-repeat="obj in cCtrl.site | filter: cCtrl.typeFormat">
-    <div class="twelve columns">
+  <div class="row">
+    <div class="four columns" ng-repeat="obj in cCtrl.site | filter: cCtrl.typeFormat">
       <img src="{{obj.icon}}" alt="Icon">
       <h5>{{obj.type}}</h5>
       <h4>{{obj.name}}</h4>
       <p>{{obj.vicinity}}</p>
-      <hr />
     </div>
   </div>
 </div>
