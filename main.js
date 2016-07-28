@@ -11,6 +11,9 @@ angular.module('NightOut')
       templateUrl: "/templates/couples.html",
       controller: "couplesCtrl as cCtrl"
     })
+    $routeProvider.when("/about", {
+      templateUrl: "/templates/about.html"
+    })
   })
 
 // ****************************************************************************
