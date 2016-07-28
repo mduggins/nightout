@@ -65,6 +65,7 @@ angular.module("NightOut")
       console.log(sCtrl.site)
     }
   })
+
   sCtrl.typeFormat = function(place){
     var format = place.type.split('')
     format[0] = format[0].toUpperCase()
@@ -75,12 +76,12 @@ angular.module("NightOut")
   window.sCtrl = sCtrl
 }
 
+// ****************************************************************************
+
   angular.module("NightOut")
     .controller('couplesCtrl', couplesCtrl)
 
     couplesCtrl.$inject = ['NgMap','$scope']
-
-// ****************************************************************************
 
     function couplesCtrl(NgMap, $scope){
       console.log('This is from the couplesCtrl')

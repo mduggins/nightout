@@ -13,6 +13,55 @@ h3 {
   margin: 0px;
 }
 
+header {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background-color: orange;
+}
+
+#logo {
+  background-image: url('http://www.icon100.com/up/3959/48/118-Black-moon-phase-shape.png');
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  float: left;
+  line-height: 60px;
+}
+
+#nav-menu {
+  float: right;
+  height: 60px;
+}
+
+#nav-menu ul {
+  list-style: none;
+  margin: 0px;
+}
+
+#nav-menu ul li {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px 20px;
+}
+
+#nav-menu ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+#nav-menu ul li a:hover {
+  color: #999;
+}
+
+#menu-icon {
+  background-image: url('http://webservices.lib.harvard.edu/hlportal/images/threeline.png');
+  height: 41px;
+  width: 48px;
+  display: none;
+}
+
 #headline-singles {
   width: 100%;
   padding: 20px 0px;
@@ -31,8 +80,8 @@ h3 {
   margin-bottom: 20px;
 }
 
-#home {
-  background-image: url('http://science-all.com/images/wallpapers/party-pictures/party-pictures-13.jpg');
+#myhome {
+  background-image: url('http://www.citi.io/wp-content/uploads/2015/08/1168-00-06.jpg');
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -64,5 +113,34 @@ h3 {
 }
 
 @media only screen and (max-width: 720px){
+  #menu-icon {
+    display: inline-block;
+  }
+  #menu {
+    display: none;
+  }
+  #nav-menu ul, #nav-menu:active ul {
+		display: none;
+    position: absolute;
+		padding: 10px;
+		background: #fff;
+		border: 1px solid #444;
+		right: 25px;
+		top: 40px;
+		width: 30%;
+		border-radius: 4px 0 4px 4px;
+    z-index: 1;
+    text-align: center;
+	}
 
+	#nav-menu li {
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+	}
+
+	#nav-menu:hover ul {
+		display: block;
+	}
 }
