@@ -18,6 +18,14 @@ header {
   height: 60px;
   line-height: 60px;
   background-color: orange;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+ng-map {
+  margin-top: 60px;
 }
 
 #logo {
@@ -102,10 +110,6 @@ header {
   background-color: rgba(255,255,255,.5);
 }
 
-#map {
-  height:100%;
-}
-
 #about {
   font-size: x-large;
 }
@@ -146,15 +150,13 @@ header {
   #nav-menu ul, #nav-menu:active ul {
 		display: none;
     position: absolute;
-		padding: 10px;
+		padding: 20px;
 		background: #fff;
 		border: 1px solid #444;
-		right: 25px;
+		right: 20px;
 		top: 40px;
-		width: 30%;
+		width: 50%;
 		border-radius: 4px 0 4px 4px;
-    z-index: 1;
-    text-align: center;
 	}
 
 	#nav-menu li {
@@ -171,4 +173,5 @@ header {
 	#innerhome {
     width: 90%;
     margin: 0px auto;
+    margin-top: 70px;
 }

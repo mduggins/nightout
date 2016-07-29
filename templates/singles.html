@@ -1,4 +1,4 @@
-<ng-map center="current-location" zoom="11">
+<ng-map center="current-location" zoom="12">
   <marker position="current-location" title="You Are Here!"></marker>
   <marker ng-repeat="obj in sCtrl.site" position="{{obj.lat}},{{obj.lng}}" title="{{obj.name}}"></marker>
 </ng-map>
